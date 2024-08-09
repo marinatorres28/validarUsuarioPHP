@@ -10,7 +10,7 @@
 <body>
 <div>
     <h1>Validar Acceso</h1>
-    <form action="lectura.php" method="post">
+    <form action="inicioSesion2.php" method="post">
 
     <div>
         <label for="usuario">Usuario:</label>
@@ -23,6 +23,13 @@
     </div>
 
     <input type="submit" value="Enviar">
+
+    <?php
+    // si mensaje no esta vacio, sacamos el mensaje que corresponda
+        if(!empty($_GET["mensaje"])){
+            echo $_GET["mensaje"];
+        }
+    ?>
 
 </form>
 </div>
